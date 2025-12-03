@@ -1,0 +1,65 @@
+.container {
+  display: block;
+  gap: 28px;
+}
+
+.heroCard {
+  background: linear-gradient(180deg, rgba(6,12,16,0.6), rgba(8,10,12,0.55));
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(40,160,255,0.12);
+  box-shadow: 0 10px 30px rgba(6, 120, 200, 0.06), 0 0 32px rgba(10, 160, 255, 0.06);
+  color: #dffbff;
+  margin-bottom: 28px;
+}
+.heroCard h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #e9ffff;
+  text-shadow: 0 2px 18px rgba(0,180,255,0.12);
+}
+.heroCard p {
+  color: #bfecef;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(4,8,12,0.5), rgba(6,10,14,0.55));
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,160,220,0.08);
+  box-shadow: 0 10px 30px rgba(0,80,100,0.03), 0 0 22px rgba(0,140,220,0.04);
+  color: #cfeef2;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#43f1e6,#7ab7ff);
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #051416;
+  box-shadow: 0 6px 20px rgba(60,200,220,0.08);
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #7ef0ff;
+  margin-bottom: 8px;
+}
+.card ul {
+  margin: 0;
+  padding-left: 16px;
+  color: #bfecef;
+  line-height: 1.6;
+}

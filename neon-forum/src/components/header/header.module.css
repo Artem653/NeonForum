@@ -1,0 +1,99 @@
+.header {
+  padding: 12px 36px 0 36px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(8,12,17,0.7), rgba(4,6,8,0.6));
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+  border: 1px solid rgba(60,120,160,0.08);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,#55f0ff,#6a8bff);
+  color: #051416;
+  font-weight: 700;
+  box-shadow: 0 0 16px rgba(90,200,255,0.18);
+}
+
+.logoText {
+  color: #d7f9ff;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.link {
+  color: #b8dfe6;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all .18s ease;
+}
+.link:hover {
+  color: #e8ffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(0,160,255,0.06);
+}
+.active {
+  background: linear-gradient(180deg, rgba(30,60,80,0.22), rgba(12,24,32,0.15));
+  border: 1px solid rgba(0,160,255,0.14);
+  box-shadow: 0 4px 30px rgba(10,120,200,0.18), inset 0 0 10px rgba(0,160,255,0.06);
+  color: #e6ffff;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lang {
+  color: #cfeef2;
+  font-size: 14px;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#b892ff,#78f3ea);
+  box-shadow: 0 6px 18px rgba(120,100,255,0.12), 0 0 12px rgba(120,200,255,0.08);
+}
+
+.neonLine {
+  margin-top: 12px;
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(10,180,255,0.0), rgba(0,140,220,0.55), rgba(100,40,220,0.1));
+  box-shadow: 0 6px 20px rgba(10,140,220,0.12), inset 0 0 20px rgba(10,140,220,0.05);
+}
