@@ -4,27 +4,17 @@ import styles from "./header.module.css";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <div className={styles.topbar}>
-        <div className={styles.left}>
-          <div className={styles.logo}>
-            <span className={styles.logoCircle}>N</span>
-            <span className={styles.logoText}>NeonForum</span>
-          </div>
+      <h1 className={styles.logo}>NeonForum</h1>
 
-          <nav className={styles.nav}>
-            <a className={styles.link} href="#">Головна</a>
-            <a className={`${styles.link} ${styles.active}`} href="#">Всі пости</a>
-            <a className={styles.link} href="#">Створити пост</a>
-          </nav>
-        </div>
+      <nav className={styles.nav}>
+        <a href="/">Головна</a>
+        <a href="/posts">Всі пости</a>
+        <a href="/create">Створити пост</a>
+      </nav>
 
-        <div className={styles.right}>
-          <div className={styles.lang}>UA ▾</div>
-          <div className={styles.avatar} />
-        </div>
+      <div className={styles.user}>
+        <span>UA</span>
       </div>
-
-      <div className={styles.neonLine} />
     </header>
   );
 }
