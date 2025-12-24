@@ -1,22 +1,19 @@
 import { Post } from "../../shared/types/post";
-import styles from "./post-list.module.css";
+import { Link } from "react-router-dom";
 
-interface Props {
-  posts: Post[];
-}
-
-export default function PostList({ posts }: Props) {
+export function PostList({ posts }: { posts: Post[] }) {
   return (
-    <div className={styles.list}>
-      {posts.map(post => (
-        <div key={post.id} className={styles.card}>
-          <h3>{post.title}</h3>
-          <img src={post.imageUrl} />
-          <p>{post.content}</p>
-          <span>❤️ {post.likes}</span>
+    <>
+      {posts.map(p => (
+        <div key={p.id}>
+          <Link to={`/posts/${p.id}`}>
+            <h2>{p.title}</h2>
+          </Link>
+          <p>❤️ {p.likesCount}</p>
         </div>
       ))}
-    </div>
+    </>
   );
 }
+
 

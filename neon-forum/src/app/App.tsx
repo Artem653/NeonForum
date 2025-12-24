@@ -1,11 +1,13 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
-import styles from "./app.module.css";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import { AppRouter } from "./router";
 
 export default function App() {
   return (
-    <div className={styles.app}>
-      <RouterProvider router={router} />
-    </div>
+    <>
+      <Header />
+      <AppRouter />
+      <Footer />
+    </>
   );
 }

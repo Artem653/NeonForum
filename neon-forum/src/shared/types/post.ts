@@ -1,8 +1,14 @@
+import { Comment } from "./comment";
+import { User } from "./user";
+
 export interface Post {
   id: number;
   title: string;
-  content: string;
-  imageUrl: string;
-  likes: number;
-  tags: number[];
+  body: string;
+  likesCount: number;
+  createdAt: string;
+  comments?: Comment[];
+  likedBy?: User[];
 }
+
+
