@@ -1,17 +1,31 @@
 import { useEffect, useState } from "react";
-import { Post } from "../shared/types/post";
+import { Post } from "../models/Post";
 
-export function usePost(id: number, include: string[] = []) {
+export const usePost = (id?: string) => {
   const [post, setPost] = useState<Post | null>(null);
-
-  const query = include.map(i => `include=${i}`).join("&");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/posts/${id}?${query}`)
-      .then(res => res.json())
-      .then(setPost);
+    if (!id) return;
+
+    setLoading(true);
+
+    setTimeout(() => {
+      setPost({
+        id,
+        title: "Найкращі RGB-сетапи 2025",
+        content: "<p>Повний огляд топових RGB конфігурацій</p>",
+        imageUrl: "/assets/post.jpg",
+        likes: 12,
+        likedBy: ["1"],
+        comments: [],
+      } as Post);
+
+      setLoading(false);
+    }, 500);
   }, [id]);
 
-  return post;
-}
+  return { post, setPost, loading, error };
+};
 

@@ -1,14 +1,17 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/home/HomePage";
-import PostsPage from "../pages/posts/PostsPage";
+import { createBrowserRouter } from "react-router-dom";
+import Layout from "../components/layout/Layout";
+import Home from "../pages/home/HomePage";
+import Posts from "../pages/posts/PostsPage";
 import PostPage from "../pages/post/PostPage";
 
-export function AppRouter() {
-  return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/posts" element={<PostsPage />} />
-      <Route path="/posts/:id" element={<PostPage />} />
-    </Routes>
-  );
-}
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "posts", element: <Posts /> },
+      { path: "posts/:id", element: <PostPage /> },
+    ],
+  },
+]);
