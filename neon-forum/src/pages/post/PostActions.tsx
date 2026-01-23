@@ -1,4 +1,3 @@
-import { Post } from "../../models/Post";
 import { useAddLike } from "../../hooks/useAddLike";
 import { useRemoveLike } from "../../hooks/useRemoveLike";
 import styles from "./post.module.css";

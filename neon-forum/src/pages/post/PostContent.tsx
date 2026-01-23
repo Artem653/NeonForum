@@ -1,5 +1,5 @@
 import styles from "./post.module.css";
-import { Post } from "../../models/Post";
+//import { Post } from "../../models/Post";
 
 const PostContent = ({ post }: { post: Post }) => (
   <div className={styles.card}>

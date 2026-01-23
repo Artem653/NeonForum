@@ -1,18 +1,24 @@
-import { Post } from "../../shared/types/post";
-import { Link } from "react-router-dom";
+import { Post } from "../../shared/types";
+import PostCard from "./PostCard";
 
-export function PostList({ posts }: { posts: Post[] }) {
+interface Props {
+  posts: Post[];
+}
+
+export default function PostList({ posts }: Props) {
   return (
-    <>
-      {posts.map(p => (
-        <div key={p.id}>
-          <Link to={`/posts/${p.id}`}>
-            <h2>{p.title}</h2>
-          </Link>
-          <p>❤️ {p.likesCount}</p>
-        </div>
+    <section>
+      {posts.map((post) => (
+        <PostCard
+          key={post.id}
+          id={post.id}
+          title={post.title}
+          preview={post.content.slice(0, 120)}
+          likes={post.likes}
+          tags={post.tags}
+        />
       ))}
-    </>
+    </section>
   );
 }
 

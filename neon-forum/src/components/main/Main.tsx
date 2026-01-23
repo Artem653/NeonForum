@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./main.module.css";
+import { ReactNode } from "react";
 
-interface MainProps {
-  children: React.ReactNode;
+interface Props {
+  children: ReactNode;
 }
 
-export default function Main({ children }: MainProps) {
-  return <main className={styles.main}>{children}</main>;
+export default function Main({ children }: Props) {
+  return <main>{children}</main>;
 }

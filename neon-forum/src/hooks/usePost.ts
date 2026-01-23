@@ -1,31 +1,27 @@
 import { useEffect, useState } from "react";
-import { Post } from "../models/Post";
+import { Post } from "../shared/types";
 
-export const usePost = (id?: string) => {
+export function usePost(id?: number) {
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!id) return;
-
     setLoading(true);
 
     setTimeout(() => {
       setPost({
         id,
-        title: "Найкращі RGB-сетапи 2025",
-        content: "<p>Повний огляд топових RGB конфігурацій</p>",
-        imageUrl: "/assets/post.jpg",
-        likes: 12,
-        likedBy: ["1"],
-        comments: [],
-      } as Post);
-
+        title: "Пост",
+        content: "Контент",
+        likes: 10,
+        tags: [],
+        likedBy: [],
+      });
       setLoading(false);
     }, 500);
   }, [id]);
 
-  return { post, setPost, loading, error };
-};
+  return { post, setPost, loading };
+}
 
